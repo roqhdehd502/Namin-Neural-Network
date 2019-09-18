@@ -1,0 +1,10 @@
+import numpy as np
+
+# load npy file
+npy_load = np.load('{YOUR NPY FILE PATH}')
+
+# Show array
+npy_load
+
+# Save array to csv file
+numpy.savetxt("Frank_CSV.csv", npy_load, delimiter=",")
