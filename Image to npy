@@ -1,8 +1,9 @@
+import numpy as np
 import PIL.Image as pilimg
 from PIL import Image
 
 # Read image
-im = pilimg.open('{YOUR IMAGE FILE}')
+im = pilimg.open('{YOUR IMAGE FILE PATH}')
 
 # Display image
 im.show()
@@ -10,11 +11,11 @@ im.show()
 # Fetch image pixel data to numpy array
 pix = np.array(im)
 
-# Save the array to csv file
-csv_save = np.save('{YOUR IMAGE PATH}', pix)
+# Save the array to npy file
+npy_save = np.save('{YOUR NPY FILE PATH}', pix)
 
-# Load the CSV.npy
-csv_load = np.load('{YOUR NPY FILE PATH.npy}')
+# Load the npy file
+npy_load = np.load('{YOUR NPY FILE PATH}.npy')
 
-# Show workspace the array
-csv_load
+# Show array
+npy_load
