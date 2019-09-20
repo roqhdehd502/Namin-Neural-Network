@@ -12,7 +12,7 @@ resized_img = load_img.resize((100, 100))
 
 # Image flip
 flip_img = resized_img.transpose(Image.FLIP_LEFT_RIGHT)
-# Getting Individual RGB channel to image
+# Getting individual RGB channel to image
 r, g, b = resized_img.split()
 
 # Processed image save
