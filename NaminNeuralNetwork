@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
                 - 23*23*8 - Pool1(3*3, Strides=2. Padding=0) - 11*11*8
     Second Layer: Conv2(16EA, 25*25*8, Strides=1, Padding=2)
                 - 11*11*16 - Pool1(3*3, Strides=2, Padding=0) - 5*5*16
-    Output Layer: Affine(W=5*5*16, B=16) - Output Nodes = 2(Frank, Not Frank)
+    Output Layer: Affine(W=5*5*16, B=16) - Output Nodes = 3(Frank, Mike, T)
  """
 
 # Load to Franklin, Michael, Trevor Images
