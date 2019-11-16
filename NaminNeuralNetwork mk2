@@ -20,10 +20,10 @@ import matplotlib.pyplot as plt
     Second Layer: Conv2(16EA, 6*6*4, Strides=1, Padding=VALID) - ReLU2
                 - 43*43*16 - Pool2(2*2, Strides=1) - 42*42*16 - Bn2
     Third Layer: Conv3(64EA, 9*9*16, Strides=3, Padding=VALID) - ReLU3
-                - 14*14*64 - Pool3(2*2, Strides=1) - 13*13*64
+                - 12*12*64 - Pool3(2*2, Strides=1) - 11*11*64
     Fourth layer: Conv4(16EA, 10*10*64, Strides=1, Padding=VALID) - ReLU4
-                - 4*4*16 - Pool4(2*2, Strides=1) - 3*3*16 - Bn3
-    Output Layer: Affine(W=2*2*16, B=16) - Output Nodes = 3(Frank, Mike, T)
+                - 2*2*16 - Pool4(2*2, Strides=1) - 1*1*16 - Bn3
+    Output Layer: Affine(W=1*1*16, B=16) - Output Nodes = 3(Frank, Mike, T)
  """
 
 # Load to Franklin, Michael, Trevor Images
@@ -72,10 +72,10 @@ with tf.Graph().as_default() as g:
         conv2 = tf.layers.conv2d(bn1, 16, 6, (1, 1), padding='VALID', activation=tf.nn.relu)
         pool2 = tf.layers.max_pooling2d(conv2, 2, (1, 1), padding='VALID')
         bn2 = tf.compat.v1.layers.batch_normalization(pool2, training=True)
-        # 3rd Layer(Conv3 - relu3 - maxpool3) = 13*13*64
+        # 3rd Layer(Conv3 - relu3 - maxpool3) = 11*11*64
         conv3 = tf.layers.conv2d(bn2, 64, 9, (3, 3), padding='VALID', activation=tf.nn.relu)
         pool3 = tf.layers.max_pooling2d(conv3, 2, (1, 1), padding='VALID')
-        # 4th Layer(Conv4 - relu4 - maxpool4 - bn3) = 3*3*16
+        # 4th Layer(Conv4 - relu4 - maxpool4 - bn3) = 1*1*16
         conv4 = tf.layers.conv2d(pool3, 16, 10, (1, 1), padding='VALID', activation=tf.nn.relu)
         pool4 = tf.layers.max_pooling2d(conv4, 2, (1, 1), padding='VALID')
         bn3 = tf.compat.v1.layers.batch_normalization(pool4, training=True)
