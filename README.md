@@ -1,7 +1,7 @@
 This is my first project as Deep Learning.
 
 - Prepare three kinds images(Franklin Clintion, Michael De Santa, Trevor Philips)
-- Load images(100*100*3/Train:360EA/Test:240EA)
+- Load images(100x100x3/Train:360EA/Test:240EA)
 - Image Preproccessing
 - Set a CNN with NNN(Namin Neural Network)
 - Set a Optimizer(Adam)
