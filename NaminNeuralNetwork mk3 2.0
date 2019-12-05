@@ -86,7 +86,7 @@ with tf.Graph().as_default() as g:
     train_step = tf.train.AdamOptimizer(0.005).minimize(Loss) 
     saver = tf.train.Saver()
     
-    tf.summary.scalar('regression_cost', Loss)
+    tf.summary.scalar('Epoch-Loss', Loss)
     merged = tf.summary.merge_all()
 
 # Size
