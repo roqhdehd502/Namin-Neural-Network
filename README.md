@@ -1,11 +1,11 @@
 This is my first project as Deep Learning.
 
-- Prepare three kinds images(Franklin Clintion, Michael De Santa, Trevor Philips)
-- Load images(100x100x3/Train:360EA/Test:240EA)
+- Prepare three kinds images
+- Load images(100x100x3/Train:1461/Test:490)
 - Image Preproccessing
 - Set a CNN with NNN(Namin Neural Network)
 - Set a Optimizer(Adam)
-- Set Epochs and Batch(1000 times, 1080 sizes)
-- Save a training files(Check the Loss rate)
+- Set Epochs and Batch(1000, 1261)
+- Save a training files(with Tensorboard)
 - Load training files and Activate testing
-- Check the results(Accuracy rate)
+- Check the results(Accuracy rate, Epoch-Loss Graph)
